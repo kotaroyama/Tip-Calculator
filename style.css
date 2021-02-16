@@ -1,0 +1,30 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: Roboto;
+  margin-bottom: 60px;
+}
+
+#header {
+  background-color: #332D2D;  
+  color: #FFFFFF;
+}
+
+@media only screen and (min-width : 900px) {
+  .container { width: 600px; } 
+}
+
+@media (max-width: 767.98px) {
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height; 60px;
+  line-height 60px;
+  background-color: #f5f5f5;
+}
