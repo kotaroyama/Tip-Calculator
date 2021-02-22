@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Tip Calculator</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -10,13 +11,18 @@
 </head>
 <body>
   <header id="header" class="p-5">
-    <h1 class="text-center">Tip Calculator </h1>
-    <h6 class="text-center text-muted">Federal Minimum Tippied Wage is $2.13/hr!</h6> 
+    <div class="container">
+      <h1 class="text-center">Tip Calculator </h1>
+      <a href="https://www.goodreads.com/quotes/tag/server-quotes" target="_blank">
+        <cite id="tippingQuote" class="text-center text-muted">“When you tip your server well, you're spreading goodwill and love." - Bert McCoy</cite> 
+      </a>
+    </div>
   </header>
 
+  <!-- warning message to be displyaed when bill amount is empty -->
   <div id="warning"></div>
 
-  <div id="form" class="container mt-5">
+  <div id="form" class="container mt-4">
     <form>
       <div class="form-group">
         <label for="amountOfBill">How much was the bill</label>
@@ -24,7 +30,7 @@
       </div>
       <div class="form-group">
         <label for="rateService">How was your service</label>
-        <select id="rateService" class="form-control">
+        <select class="form-control" id="rateService">
           <option value="excellent">Excellent</option>
           <option value="good">Good</option>
           <option value="ok">OK</option>
@@ -35,7 +41,7 @@
         <label for="numberOfPeople">How many people?</label>
         <input type="number" class="form-control" id="numberOfPeople">
       </div>
-      <button class="btn btn-success" id="calculate">Calculate</button>
+      <button type="submit" class="btn btn-success" id="calculate">Calculate</button>
     </form>
   </div>
 

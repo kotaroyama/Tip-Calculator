@@ -13,11 +13,12 @@ body {
   color: #FFFFFF;
 }
 
-@media only screen and (min-width : 900px) {
-  .container { width: 600px; } 
+#tippingQuote {
+  font-size: 13px;
 }
 
-@media (max-width: 767.98px) {
+@media only screen and (min-width : 900px) {
+.container { width: 600px; }
 }
 
 .footer {

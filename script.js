@@ -26,17 +26,24 @@ function calculateTip(amountOfBill, numOfPeople, qualityOfService) {
 }
 
 function displayResult(tipAmount, totalAmount) {
+  // Clear warning message if there is one
+  let warning = $("#warning");
+  if (warning.html()) {
+    warning.removeClass();
+    warning.empty();
+  }
+
   // Compose messages
   const tip_msg = `You should tip: <mark>$${tipAmount}</mark>`;
   const total_msg = `Your total bill is: <mark>$${totalAmount}</mark>`;
 
   let displayField = $("#displayTip");
-  displayField.addClass("container mt-5 alert alert-primary");
+  displayField.addClass("container mt-3 mb-3 alert alert-primary");
   displayField.empty();
  
   // Tip amount and total amount is displayed with h2
-  const tip_h2 = $("<h2>" + tip_msg + "</h2>");
-  const total_h2 = $("<h2>" + total_msg + "</h2>");
+  const tip_h2 = $("<h3>" + tip_msg + "</h3>");
+  const total_h2 = $("<h3>" + total_msg + "</h3>");
   tip_h2.appendTo(displayField);
   total_h2.appendTo(displayField);
 }
@@ -44,9 +51,15 @@ function displayResult(tipAmount, totalAmount) {
 function displayWarning() {
   // Compose an error message
   let warning = $("#warning");
-  warning.addClass("alert alert-danger");
+  warning.addClass("container alert alert-danger");
   warning.attr("role", "alert");
   warning.html("You need to enter the amount of bill");
+}
+
+function removeWarning() {
+  // Hide the warning
+  let warning_msg = $("#warning");
+  warning_msg.emptry();
 }
 
 $( document ).ready( () => {
